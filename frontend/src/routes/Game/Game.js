@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 
@@ -11,33 +10,35 @@ import {ControlBoard} from './ControlBoard';
 import {GameBoard} from './GameBoard';
 import {StatusBar} from './StatusBar';
 
-
 class Game extends React.Component {
     render() {
         return (
-            <div style={{height: '100%', backgroundColor:'white', color: 'black'}}>
+            <div style={{height: '100%', backgroundColor:'white', color: 'black', display: 'flex', flexDirection: 'column'}}>
 
                 <AppBar position="static" color="default">
                     <Toolbar>
                         <Typography type="title" color="inherit">
-                            Title
+                            Curve Fever
                         </Typography>
                     </Toolbar>
                 </AppBar>
 
-                <div style={{display: 'flex', flexDirection: 'row'}}>
-                    <div style={{width: '200px'}}>
+                <Paper style={{display: 'flex', flexDirection: 'row', flexGrow: 1}}>
+                    <Paper style={{width: '300px'}}>
                         <ControlBoard />
-                    </div>
-                    <div style={{width: 'calc(100% - 200px)'}}>
-                        <div style={{height: 'calc(100% - 50px)', width: '100%'}}>
+                    </Paper>
+                    <Paper style={{flexGrow: 1, display: 'flex', flexDirection: 'column'}}>
+                        <Paper style={{flexGrow: 1, width: '100%', display: 'flex'}}>
                             <GameBoard />
-                        </div>
-                        <div style={{height: '50px', width: '100%'}}>
+                        </Paper>
+                        <Paper style={{height: '50px', width: '100%'}}>
                             <StatusBar />
-                        </div>
-                    </div>
-                </div>
+                        </Paper>
+                    </Paper>
+                    <Paper style={{width: '300px'}}>
+                        Commercials
+                    </Paper>
+                </Paper>
                 
             </div>
         );

@@ -28,8 +28,7 @@ class GameBoard extends React.Component {
         return (
             <div 
                 style={{
-                    width: '100%',
-                    height: '100%',
+                    flexGrow: 1,
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center'
@@ -38,12 +37,16 @@ class GameBoard extends React.Component {
             >
                 <div
                     style={{
-                        display: 'flex'
+                        display: 'flex',
+                        backgroundColor: 'black'
                     }}
                     className='gameBoardComponent'
                 >
-                    <div style={{width: '99%', height: '99%', margin: 'auto',
-                        border: '1px solid white'}}></div>
+                    <div style={{
+                        width: 'calc(100% - 10px)', height: 'calc(100% - 10px)',
+                        margin: 'auto',
+                        border: '1px solid white'}}>
+                    </div>
                 </div>
                 
             </div>

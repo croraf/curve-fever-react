@@ -16,7 +16,7 @@ class PlayersList extends React.Component {
             <div>
                 <List>
                     {players1.map(player => (
-                        <ListItem button>
+                        <ListItem key={player} button>
                             <ListItemIcon>
                                 <InboxIcon />
                             </ListItemIcon>
@@ -29,7 +29,7 @@ class PlayersList extends React.Component {
 
                 <List>
                     {players2.map(player => (
-                        <ListItem button>
+                        <ListItem key={player} button>
                             <ListItemIcon>
                                 <InboxIcon />
                             </ListItemIcon>

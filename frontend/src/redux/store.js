@@ -2,7 +2,7 @@
 import { createStore } from 'redux'
 
 
-import { combineReducers, applyMiddleware } from 'redux'
+import { combineReducers, applyMiddleware, compose } from 'redux'
 
 import { exampleReducer } from './reducers';
 import { routerReducer, routerMiddleware, push } from 'react-router-redux';
